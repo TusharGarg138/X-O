@@ -67,3 +67,4 @@ for i in range(3):
                                   command=lambda r=i, c=j: click(r, c))
         buttons[i][j].grid(row=i, column=j)
 
+root.mainloop()
