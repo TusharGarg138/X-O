@@ -34,3 +34,20 @@ def check_draw():
                 return False
     return True
 
+# Handle button click
+def click(row, col):
+    global player
+
+    if buttons[row][col]["text"] == "":
+        buttons[row][col]["text"] = player
+        buttons[row][col]["state"] = "disabled"
+
+        if check_winner():
+            messagebox.showinfo("Game Over", f"Player {player} wins!")
+            reset_game()
+        elif check_draw():
+            messagebox.showinfo("Game Over", "It's a draw!")
+            reset_game()
+        else:
+            player = "O" if player == "X" else "X"
+
