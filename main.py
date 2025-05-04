@@ -60,3 +60,10 @@ def reset_game():
             btn["text"] = ""
             btn["state"] = "normal"
 
+# Create 3x3 buttons
+for i in range(3):
+    for j in range(3):
+        buttons[i][j] = tk.Button(root, text="", font=('Helvetica', 32), width=5, height=2,
+                                  command=lambda r=i, c=j: click(r, c))
+        buttons[i][j].grid(row=i, column=j)
+
