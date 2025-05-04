@@ -51,3 +51,12 @@ def click(row, col):
         else:
             player = "O" if player == "X" else "X"
 
+# Reset the game
+def reset_game():
+    global player
+    player = "X"
+    for row in buttons:
+        for btn in row:
+            btn["text"] = ""
+            btn["state"] = "normal"
+
