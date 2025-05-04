@@ -26,3 +26,11 @@ def check_winner():
 
     return False
 
+# Check if draw
+def check_draw():
+    for row in buttons:
+        for btn in row:
+            if btn["text"] == "":
+                return False
+    return True
+
